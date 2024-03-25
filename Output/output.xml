@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-25T20:33:00.823110" rpa="false" schemaversion="5">
+<suite id="s1" name="TestSuite" source="C:\Users\Fer\Documents\knime-exercises\ex-01-add-and-delete-space\TestSuite.robot">
+<test id="s1-t1" name="Valid Login" line="14">
+<kw name="Open Browser To Login Page" owner="keywords">
+<msg time="2024-03-25T20:33:00.976388" level="TRACE">Arguments: [  ]</msg>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-25T20:33:00.976388" level="TRACE">Arguments: [ 'https://hub.knime.com/' | 'Chrome' ]</msg>
+<msg time="2024-03-25T20:33:00.976388" level="INFO">Opening browser 'Chrome' to base url 'https://hub.knime.com/'.</msg>
+<msg time="2024-03-25T20:33:00.981399" level="DEBUG">Selenium Manager binary found at: C:\Users\Fer\Documents\knime-exercises\ex-01-add-and-delete-space\venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2024-03-25T20:33:00.981399" level="DEBUG">Executing process: C:\Users\Fer\Documents\knime-exercises\ex-01-add-and-delete-space\venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --language-binding python --output json</msg>
+<msg time="2024-03-25T20:33:01.281650" level="DEBUG">Driver path: C:\Users\Fer\Documents\knime-exercises\ex-01-add-and-delete-space\chromedriver.exe</msg>
+<msg time="2024-03-25T20:33:01.281650" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-03-25T20:33:01.281650" level="DEBUG">Using driver at: C:\Users\Fer\Documents\knime-exercises\ex-01-add-and-delete-space\chromedriver.exe</msg>
+<msg time="2024-03-25T20:33:01.301400" level="DEBUG">Started executable: `C:\Users\Fer\Documents\knime-exercises\ex-01-add-and-delete-space\chromedriver.exe` in a child process with pid: 12652 using 0 to output -3</msg>
+<msg time="2024-03-25T20:33:01.824481" level="DEBUG">POST http://localhost:51105/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}</msg>
+<msg time="2024-03-25T20:33:01.824481" level="DEBUG">Starting new HTTP connection (1): localhost:51105</msg>
+<msg time="2024-03-25T20:33:02.340598" level="DEBUG">http://localhost:51105 "POST /session HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T20:33:02.340598" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"123.0.6312.59","chrome":{"chromedriverVersion":"123.0.6312.58 (6b4b19e9dfbb93aa414dc045bd445287977d8d7a-refs/branch-heads/6312_46@{#3})","userDataDir":"C:\\Users\\Fer\\AppData\\Local\\Temp\\scoped_dir12652_786486204"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:51108"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"4da8c061c0801ed97b4275e69b8948ca"}} | headers=HTTPHeaderDict({'Content-Length': '879', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T20:33:02.340598" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T20:33:02.340598" level="DEBUG">POST http://localhost:51105/session/4da8c061c0801ed97b4275e69b8948ca/timeouts {'script': 5000}</msg>
+<msg time="2024-03-25T20:33:02.340598" level="DEBUG">http://localhost:51105 "POST /session/4da8c061c0801ed97b4275e69b8948ca/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T20:33:02.340598" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T20:33:02.340598" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T20:33:02.341598" level="DEBUG">POST http://localhost:51105/session/4da8c061c0801ed97b4275e69b8948ca/timeouts {'implicit': 0}</msg>
+<msg time="2024-03-25T20:33:02.341598" level="DEBUG">http://localhost:51105 "POST /session/4da8c061c0801ed97b4275e69b8948ca/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T20:33:02.341598" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T20:33:02.341598" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T20:33:02.341598" level="DEBUG">POST http://localhost:51105/session/4da8c061c0801ed97b4275e69b8948ca/timeouts {'pageLoad': 300000}</msg>
+<msg time="2024-03-25T20:33:02.342598" level="DEBUG">http://localhost:51105 "POST /session/4da8c061c0801ed97b4275e69b8948ca/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T20:33:02.342598" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T20:33:02.342598" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T20:33:02.342598" level="DEBUG">POST http://localhost:51105/session/4da8c061c0801ed97b4275e69b8948ca/url {'url': 'https://hub.knime.com/'}</msg>
+<msg time="2024-03-25T20:33:04.291506" level="DEBUG">http://localhost:51105 "POST /session/4da8c061c0801ed97b4275e69b8948ca/url HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T20:33:04.291506" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T20:33:04.291506" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T20:33:04.291506" level="DEBUG">Opened browser with session id 4da8c061c0801ed97b4275e69b8948ca.</msg>
+<msg time="2024-03-25T20:33:04.291506" level="TRACE">Return: 1</msg>
+<arg>${HUB PAGE URL}</arg>
+<arg>${BROWSER CHROME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-25T20:33:00.976388" elapsed="3.315118"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T20:33:04.291506" level="TRACE">Arguments: [ '3' ]</msg>
+<msg time="2024-03-25T20:33:07.291548" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-03-25T20:33:07.291548" level="TRACE">Return: None</msg>
+<arg>${CHANGING PAGE DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T20:33:04.291506" elapsed="3.000042"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-25T20:33:07.291548" level="TRACE">Arguments: [ '//*[@id="__layout"]/div/div[4]/div[2]/div/div[1]/button' ]</msg>
+<msg time="2024-03-25T20:33:07.291548" level="INFO">Clicking element '//*[@id="__layout"]/div/div[4]/div[2]/div/div[1]/button'.</msg>
+<msg time="2024-03-25T20:33:07.292548" level="DEBUG">POST http://localhost:51105/session/4da8c061c0801ed97b4275e69b8948ca/elements {'using': 'xpath', 'value': '//*[@id="__layout"]/div/div[4]/div[2]/div/div[1]/button'}</msg>
+<msg time="2024-03-25T20:33:07.300549" level="DEBUG">http://localhost:51105 "POST /session/4da8c061c0801ed97b4275e69b8948ca/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T20:33:07.300549" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.DCDDB00EE69E5D065AA32B659FD51CC1.d.A92E5FFE934EC15A62A40CC326AF579E.e.16"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T20:33:07.300549" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T20:33:07.300549" level="DEBUG">POST http://localhost:51105/session/4da8c061c0801ed97b4275e69b8948ca/element/f.DCDDB00EE69E5D065AA32B659FD51CC1.d.A92E5FFE934EC15A62A40CC326AF579E.e.16/click {}</msg>
+<msg time="2024-03-25T20:33:07.325556" level="DEBUG">http://localhost:51105 "POST /session/4da8c061c0801ed97b4275e69b8948ca/element/f.DCDDB00EE69E5D065AA32B659FD51CC1.d.A92E5FFE934EC15A62A40CC326AF579E.e.16/click HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T20:33:07.325556" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T20:33:07.325556" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T20:33:07.325556" level="TRACE">Return: None</msg>
+<arg>${CLOSE COOKIES WINDOW XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T20:33:07.291548" elapsed="0.034008"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T20:33:07.325556" level="TRACE">Arguments: [ '2' ]</msg>
+<msg time="2024-03-25T20:33:09.325595" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-25T20:33:09.325595" level="TRACE">Return: None</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T20:33:07.325556" elapsed="2.000039"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-25T20:33:09.325595" level="TRACE">Arguments: [ '//*[@id="__layout"]/div/div[1]/header/nav/div[2]/button' ]</msg>
+<msg time="2024-03-25T20:33:09.325595" level="INFO">Clicking element '//*[@id="__layout"]/div/div[1]/header/nav/div[2]/button'.</msg>
+<msg time="2024-03-25T20:33:09.325595" level="DEBUG">POST http://localhost:51105/session/4da8c061c0801ed97b4275e69b8948ca/elements {'using': 'xpath', 'value': '//*[@id="__layout"]/div/div[1]/header/nav/div[2]/button'}</msg>
+<msg time="2024-03-25T20:33:09.331628" level="DEBUG">http://localhost:51105 "POST /session/4da8c061c0801ed97b4275e69b8948ca/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T20:33:09.331628" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.DCDDB00EE69E5D065AA32B659FD51CC1.d.A92E5FFE934EC15A62A40CC326AF579E.e.21"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T20:33:09.331628" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T20:33:09.331628" level="DEBUG">POST http://localhost:51105/session/4da8c061c0801ed97b4275e69b8948ca/element/f.DCDDB00EE69E5D065AA32B659FD51CC1.d.A92E5FFE934EC15A62A40CC326AF579E.e.21/click {}</msg>
+<msg time="2024-03-25T20:33:14.748024" level="DEBUG">http://localhost:51105 "POST /session/4da8c061c0801ed97b4275e69b8948ca/element/f.DCDDB00EE69E5D065AA32B659FD51CC1.d.A92E5FFE934EC15A62A40CC326AF579E.e.21/click HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T20:33:14.749024" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T20:33:14.749024" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T20:33:14.749024" level="TRACE">Return: None</msg>
+<arg>${SIGN IN BUTTON XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T20:33:09.325595" elapsed="5.423429"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T20:33:14.749024" level="TRACE">Arguments: [ '3' ]</msg>
+<msg time="2024-03-25T20:33:17.749096" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-03-25T20:33:17.749096" level="TRACE">Return: None</msg>
+<arg>${CHANGING PAGE DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T20:33:14.749024" elapsed="3.000072"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-25T20:33:17.749096" level="TRACE">Arguments: [ 'Log in | KNIME' ]</msg>
+<msg time="2024-03-25T20:33:17.749608" level="DEBUG">GET http://localhost:51105/session/4da8c061c0801ed97b4275e69b8948ca/title {}</msg>
+<msg time="2024-03-25T20:33:17.751619" level="DEBUG">http://localhost:51105 "GET /session/4da8c061c0801ed97b4275e69b8948ca/title HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T20:33:17.751619" level="DEBUG">Remote response: status=200 | data={"value":"Log in | KNIME"} | headers=HTTPHeaderDict({'Content-Length': '26', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T20:33:17.751619" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T20:33:17.751619" level="INFO">Page title is 'Log in | KNIME'.</msg>
+<msg time="2024-03-25T20:33:17.751619" level="TRACE">Return: None</msg>
+<arg>Log in | KNIME</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-03-25T20:33:17.749096" elapsed="0.002523"/>
+</kw>
+<msg time="2024-03-25T20:33:17.751619" level="TRACE">Return: None</msg>
+<status status="PASS" start="2024-03-25T20:33:00.976388" elapsed="16.775231"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T20:33:17.751619" level="TRACE">Arguments: [ '3' ]</msg>
+<msg time="2024-03-25T20:33:20.752015" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-03-25T20:33:20.752015" level="TRACE">Return: None</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T20:33:17.751619" elapsed="3.000396"/>
+</kw>
+<kw name="Input Username" owner="keywords">
+<msg time="2024-03-25T20:33:20.752015" level="TRACE">Arguments: [ ${username}='qaknimeweb' ]</msg>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-25T20:33:20.752015" level="TRACE">Arguments: [ 'edit-name' | 'qaknimeweb' ]</msg>
+<msg time="2024-03-25T20:33:20.752015" level="INFO">Typing text 'qaknimeweb' into text field 'edit-name'.</msg>
+<msg time="2024-03-25T20:33:20.752015" level="DEBUG">POST http://localhost:51105/session/4da8c061c0801ed97b4275e69b8948ca/elements {'using': 'xpath', 'value': "//*[(@id='edit-name' or @name='edit-name')]"}</msg>
+<msg time="2024-03-25T20:33:20.761514" level="DEBUG">http://localhost:51105 "POST /session/4da8c061c0801ed97b4275e69b8948ca/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T20:33:20.761514" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.DCDDB00EE69E5D065AA32B659FD51CC1.d.69F2BDFD5C0F64EF7BD9F2D8B548A37A.e.23"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T20:33:20.761514" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T20:33:20.761514" level="DEBUG">POST http://localhost:51105/session/4da8c061c0801ed97b4275e69b8948ca/element/f.DCDDB00EE69E5D065AA32B659FD51CC1.d.69F2BDFD5C0F64EF7BD9F2D8B548A37A.e.23/clear {}</msg>
+<msg time="2024-03-25T20:33:20.771683" level="DEBUG">http://localhost:51105 "POST /session/4da8c061c0801ed97b4275e69b8948ca/element/f.DCDDB00EE69E5D065AA32B659FD51CC1.d.69F2BDFD5C0F64EF7BD9F2D8B548A37A.e.23/clear HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T20:33:20.771683" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T20:33:20.771683" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T20:33:20.771683" level="DEBUG">POST http://localhost:51105/session/4da8c061c0801ed97b4275e69b8948ca/element/f.DCDDB00EE69E5D065AA32B659FD51CC1.d.69F2BDFD5C0F64EF7BD9F2D8B548A37A.e.23/value {'text': 'qaknimeweb', 'value': ['q', 'a', 'k', 'n', 'i', 'm', 'e', 'w', 'e', 'b']}</msg>
+<msg time="2024-03-25T20:33:20.801614" level="DEBUG">http://localhost:51105 "POST /session/4da8c061c0801ed97b4275e69b8948ca/element/f.DCDDB00EE69E5D065AA32B659FD51CC1.d.69F2BDFD5C0F64EF7BD9F2D8B548A37A.e.23/value HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T20:33:20.801614" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T20:33:20.801614" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T20:33:20.801614" level="TRACE">Return: None</msg>
+<arg>${INPUT USERNAME ID}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T20:33:20.752015" elapsed="0.049599"/>
+</kw>
+<msg time="2024-03-25T20:33:20.801614" level="TRACE">Return: None</msg>
+<arg>${VALID USERNAME}</arg>
+<status status="PASS" start="2024-03-25T20:33:20.752015" elapsed="0.049599"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T20:33:20.801614" level="TRACE">Arguments: [ '2' ]</msg>
+<msg time="2024-03-25T20:33:22.801836" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-25T20:33:22.801836" level="TRACE">Return: None</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T20:33:20.801614" elapsed="2.000222"/>
+</kw>
+<status status="PASS" start="2024-03-25T20:33:00.976388" elapsed="21.825448"/>
+</test>
+<doc>Running TestSuite - add / delete public space</doc>
+<status status="PASS" start="2024-03-25T20:33:00.824110" elapsed="21.978721"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestSuite">TestSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
