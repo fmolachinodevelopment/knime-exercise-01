@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-25T23:41:50.234725" rpa="false" schemaversion="5">
+<suite id="s1" name="TestSuite" source="C:\Users\Fer\Documents\knime-exercises\ex-01-add-and-delete-space\TestSuite.robot">
+<test id="s1-t1" name="Valid Login" line="15">
+<kw name="Open Browser To Login Page" owner="keywords">
+<msg time="2024-03-25T23:41:50.396762" level="TRACE">Arguments: [  ]</msg>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:41:50.396762" level="TRACE">Arguments: [ 'https://hub.knime.com/' | 'Chrome' ]</msg>
+<msg time="2024-03-25T23:41:50.396762" level="INFO">Opening browser 'Chrome' to base url 'https://hub.knime.com/'.</msg>
+<msg time="2024-03-25T23:41:50.397762" level="DEBUG">Selenium Manager binary found at: C:\Users\Fer\Documents\knime-exercises\ex-01-add-and-delete-space\venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2024-03-25T23:41:50.397762" level="DEBUG">Executing process: C:\Users\Fer\Documents\knime-exercises\ex-01-add-and-delete-space\venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --language-binding python --output json</msg>
+<msg time="2024-03-25T23:41:50.724836" level="DEBUG">Driver path: C:\Users\Fer\Documents\knime-exercises\ex-01-add-and-delete-space\chromedriver.exe</msg>
+<msg time="2024-03-25T23:41:50.724836" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-03-25T23:41:50.724836" level="DEBUG">Using driver at: C:\Users\Fer\Documents\knime-exercises\ex-01-add-and-delete-space\chromedriver.exe</msg>
+<msg time="2024-03-25T23:41:50.752842" level="DEBUG">Started executable: `C:\Users\Fer\Documents\knime-exercises\ex-01-add-and-delete-space\chromedriver.exe` in a child process with pid: 1764 using 0 to output -3</msg>
+<msg time="2024-03-25T23:41:51.271763" level="DEBUG">POST http://localhost:55530/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}</msg>
+<msg time="2024-03-25T23:41:51.271763" level="DEBUG">Starting new HTTP connection (1): localhost:55530</msg>
+<msg time="2024-03-25T23:41:51.779014" level="DEBUG">http://localhost:55530 "POST /session HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:41:51.779014" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"123.0.6312.59","chrome":{"chromedriverVersion":"123.0.6312.58 (6b4b19e9dfbb93aa414dc045bd445287977d8d7a-refs/branch-heads/6312_46@{#3})","userDataDir":"C:\\Users\\Fer\\AppData\\Local\\Temp\\scoped_dir1764_964739499"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:55533"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"515ae6e0391632a3616bd8e799036f27"}} | headers=HTTPHeaderDict({'Content-Length': '878', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:41:51.779014" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:41:51.779014" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/timeouts {'script': 5000}</msg>
+<msg time="2024-03-25T23:41:51.779014" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:41:51.779014" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:41:51.779014" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:41:51.779014" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/timeouts {'implicit': 0}</msg>
+<msg time="2024-03-25T23:41:51.779014" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:41:51.779014" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:41:51.779014" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:41:51.779014" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/timeouts {'pageLoad': 300000}</msg>
+<msg time="2024-03-25T23:41:51.779014" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:41:51.779014" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:41:51.779014" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:41:51.779014" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/url {'url': 'https://hub.knime.com/'}</msg>
+<msg time="2024-03-25T23:41:53.348972" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/url HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:41:53.348972" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:41:53.348972" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:41:53.348972" level="DEBUG">Opened browser with session id 515ae6e0391632a3616bd8e799036f27.</msg>
+<msg time="2024-03-25T23:41:53.348972" level="TRACE">Return: 1</msg>
+<arg>${HUB PAGE URL}</arg>
+<arg>${BROWSER CHROME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-25T23:41:50.396762" elapsed="2.952210"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T23:41:53.348972" level="TRACE">Arguments: [ '2' ]</msg>
+<msg time="2024-03-25T23:41:55.349246" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-25T23:41:55.349246" level="TRACE">Return: None</msg>
+<arg>${CHANGING PAGE DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T23:41:53.348972" elapsed="2.000274"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:41:55.349246" level="TRACE">Arguments: [ 'KNIME Community Hub' ]</msg>
+<msg time="2024-03-25T23:41:55.349246" level="DEBUG">GET http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/title {}</msg>
+<msg time="2024-03-25T23:41:55.354246" level="DEBUG">http://localhost:55530 "GET /session/515ae6e0391632a3616bd8e799036f27/title HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:41:55.354246" level="DEBUG">Remote response: status=200 | data={"value":"KNIME Community Hub"} | headers=HTTPHeaderDict({'Content-Length': '31', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:41:55.354246" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:41:55.355247" level="INFO">Page title is 'KNIME Community Hub'.</msg>
+<msg time="2024-03-25T23:41:55.355247" level="TRACE">Return: None</msg>
+<arg>${HUB TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-03-25T23:41:55.349246" elapsed="0.006001"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:41:55.355247" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-03-25T23:41:55.355247" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/window/maximize {}</msg>
+<msg time="2024-03-25T23:41:55.477904" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/window/maximize HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:41:55.477904" level="DEBUG">Remote response: status=200 | data={"value":{"height":1056,"width":1936,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '52', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:41:55.477904" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:41:55.477904" level="TRACE">Return: None</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-25T23:41:55.355247" elapsed="0.122657"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:41:55.477904" level="TRACE">Arguments: [ '//*[@id="__layout"]/div/div[4]/div[2]/div/div[1]/button' ]</msg>
+<msg time="2024-03-25T23:41:55.478904" level="INFO">Clicking element '//*[@id="__layout"]/div/div[4]/div[2]/div/div[1]/button'.</msg>
+<msg time="2024-03-25T23:41:55.478904" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': '//*[@id="__layout"]/div/div[4]/div[2]/div/div[1]/button'}</msg>
+<msg time="2024-03-25T23:41:55.485906" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:41:55.485906" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.205DFB09AE1E4DFBDEA592E9BDB2181D.e.77"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:41:55.486906" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:41:55.486906" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.205DFB09AE1E4DFBDEA592E9BDB2181D.e.77/click {}</msg>
+<msg time="2024-03-25T23:41:55.510911" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.205DFB09AE1E4DFBDEA592E9BDB2181D.e.77/click HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:41:55.510911" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:41:55.510911" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:41:55.510911" level="TRACE">Return: None</msg>
+<arg>${CLOSE COOKIES WINDOW XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T23:41:55.477904" elapsed="0.033007"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:41:55.511911" level="TRACE">Arguments: [ '//*[@id="__layout"]/div/div[1]/header/nav/div[2]/button' ]</msg>
+<msg time="2024-03-25T23:41:55.511911" level="INFO">Clicking element '//*[@id="__layout"]/div/div[1]/header/nav/div[2]/button'.</msg>
+<msg time="2024-03-25T23:41:55.511911" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': '//*[@id="__layout"]/div/div[1]/header/nav/div[2]/button'}</msg>
+<msg time="2024-03-25T23:41:55.519913" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:41:55.519913" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.205DFB09AE1E4DFBDEA592E9BDB2181D.e.83"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:41:55.519913" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:41:55.519913" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.205DFB09AE1E4DFBDEA592E9BDB2181D.e.83/click {}</msg>
+<msg time="2024-03-25T23:42:00.960026" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.205DFB09AE1E4DFBDEA592E9BDB2181D.e.83/click HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:00.960214" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:00.960214" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:00.960214" level="TRACE">Return: None</msg>
+<arg>${SIGN IN BUTTON XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T23:41:55.510911" elapsed="5.449303"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T23:42:00.960214" level="TRACE">Arguments: [ '2' ]</msg>
+<msg time="2024-03-25T23:42:02.960227" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-25T23:42:02.960227" level="TRACE">Return: None</msg>
+<arg>${CHANGING PAGE DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T23:42:00.960214" elapsed="2.000013"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:02.960227" level="TRACE">Arguments: [ 'Log in | KNIME' ]</msg>
+<msg time="2024-03-25T23:42:02.960227" level="DEBUG">GET http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/title {}</msg>
+<msg time="2024-03-25T23:42:02.963229" level="DEBUG">http://localhost:55530 "GET /session/515ae6e0391632a3616bd8e799036f27/title HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:02.963229" level="DEBUG">Remote response: status=200 | data={"value":"Log in | KNIME"} | headers=HTTPHeaderDict({'Content-Length': '26', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:02.963229" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:02.963229" level="INFO">Page title is 'Log in | KNIME'.</msg>
+<msg time="2024-03-25T23:42:02.963229" level="TRACE">Return: None</msg>
+<arg>${LOG IN PAGE TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-03-25T23:42:02.960227" elapsed="0.003002"/>
+</kw>
+<msg time="2024-03-25T23:42:02.963229" level="TRACE">Return: None</msg>
+<status status="PASS" start="2024-03-25T23:41:50.396762" elapsed="12.566467"/>
+</kw>
+<kw name="Input Username" owner="keywords">
+<msg time="2024-03-25T23:42:02.964230" level="TRACE">Arguments: [ ${username}='qaknimeweb' ]</msg>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:02.964230" level="TRACE">Arguments: [ 'edit-name' | 'qaknimeweb' ]</msg>
+<msg time="2024-03-25T23:42:02.964230" level="INFO">Typing text 'qaknimeweb' into text field 'edit-name'.</msg>
+<msg time="2024-03-25T23:42:02.964230" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': "//*[(@id='edit-name' or @name='edit-name')]"}</msg>
+<msg time="2024-03-25T23:42:02.972231" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:02.972231" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.D2E9EE7DC2AC6254A2DC3BBE836BF983.e.87"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:02.972231" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:02.972231" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.D2E9EE7DC2AC6254A2DC3BBE836BF983.e.87/clear {}</msg>
+<msg time="2024-03-25T23:42:02.991235" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.D2E9EE7DC2AC6254A2DC3BBE836BF983.e.87/clear HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:02.991235" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:02.991235" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:02.991235" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.D2E9EE7DC2AC6254A2DC3BBE836BF983.e.87/value {'text': 'qaknimeweb', 'value': ['q', 'a', 'k', 'n', 'i', 'm', 'e', 'w', 'e', 'b']}</msg>
+<msg time="2024-03-25T23:42:03.013241" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.D2E9EE7DC2AC6254A2DC3BBE836BF983.e.87/value HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:03.013241" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:03.013241" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:03.013241" level="TRACE">Return: None</msg>
+<arg>${INPUT USERNAME ID}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T23:42:02.964230" elapsed="0.049011"/>
+</kw>
+<msg time="2024-03-25T23:42:03.013241" level="TRACE">Return: None</msg>
+<arg>${VALID USERNAME}</arg>
+<status status="PASS" start="2024-03-25T23:42:02.963229" elapsed="0.050012"/>
+</kw>
+<kw name="Input Password" owner="keywords">
+<msg time="2024-03-25T23:42:03.014241" level="TRACE">Arguments: [ ${password}='0qAknimeweb0_' ]</msg>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:03.014241" level="TRACE">Arguments: [ 'edit-pass' | '0qAknimeweb0_' ]</msg>
+<msg time="2024-03-25T23:42:03.014241" level="INFO">Typing text '0qAknimeweb0_' into text field 'edit-pass'.</msg>
+<msg time="2024-03-25T23:42:03.014241" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': "//*[(@id='edit-pass' or @name='edit-pass')]"}</msg>
+<msg time="2024-03-25T23:42:03.021242" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:03.021242" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.D2E9EE7DC2AC6254A2DC3BBE836BF983.e.89"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:03.021242" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:03.021242" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.D2E9EE7DC2AC6254A2DC3BBE836BF983.e.89/clear {}</msg>
+<msg time="2024-03-25T23:42:03.034246" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.D2E9EE7DC2AC6254A2DC3BBE836BF983.e.89/clear HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:03.034246" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:03.034246" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:03.034246" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.D2E9EE7DC2AC6254A2DC3BBE836BF983.e.89/value {'text': '0qAknimeweb0_', 'value': ['0', 'q', 'A', 'k', 'n', 'i', 'm', 'e', 'w', 'e', 'b', '0', '_']}</msg>
+<msg time="2024-03-25T23:42:03.065252" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.D2E9EE7DC2AC6254A2DC3BBE836BF983.e.89/value HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:03.065252" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:03.065252" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:03.065252" level="TRACE">Return: None</msg>
+<arg>${INPUT PASSWORD ID}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T23:42:03.014241" elapsed="0.051011"/>
+</kw>
+<msg time="2024-03-25T23:42:03.065252" level="TRACE">Return: None</msg>
+<arg>${VALID PASSWORD}</arg>
+<status status="PASS" start="2024-03-25T23:42:03.014241" elapsed="0.051011"/>
+</kw>
+<kw name="Submit Credentials" owner="keywords">
+<msg time="2024-03-25T23:42:03.066252" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:03.066252" level="TRACE">Arguments: [ 'edit-submit' ]</msg>
+<msg time="2024-03-25T23:42:03.066252" level="INFO">Clicking element 'edit-submit'.</msg>
+<msg time="2024-03-25T23:42:03.066252" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': "//*[(@id='edit-submit' or @name='edit-submit')]"}</msg>
+<msg time="2024-03-25T23:42:03.074254" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:03.074254" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.D2E9EE7DC2AC6254A2DC3BBE836BF983.e.105"}]} | headers=HTTPHeaderDict({'Content-Length': '129', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:03.074254" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:03.074254" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.D2E9EE7DC2AC6254A2DC3BBE836BF983.e.105/click {}</msg>
+<msg time="2024-03-25T23:42:06.331400" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.D2E9EE7DC2AC6254A2DC3BBE836BF983.e.105/click HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:06.331400" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:06.331400" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:06.331400" level="TRACE">Return: None</msg>
+<arg>${SIGN IN SUBMIT ID}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T23:42:03.066252" elapsed="3.265148"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T23:42:06.332400" level="TRACE">Arguments: [ '1' ]</msg>
+<msg time="2024-03-25T23:42:07.332426" level="INFO">Slept 1 second.</msg>
+<msg time="2024-03-25T23:42:07.332426" level="TRACE">Return: None</msg>
+<arg>${SMALL DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T23:42:06.332400" elapsed="1.000026"/>
+</kw>
+<msg time="2024-03-25T23:42:07.332426" level="TRACE">Return: None</msg>
+<status status="PASS" start="2024-03-25T23:42:03.066252" elapsed="4.266174"/>
+</kw>
+<kw name="User Should Be Logged" owner="keywords">
+<msg time="2024-03-25T23:42:07.333437" level="TRACE">Arguments: [ ${username}='qaknimeweb' ]</msg>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:07.333437" level="TRACE">Arguments: [ 'qaknimeweb' ]</msg>
+<msg time="2024-03-25T23:42:07.333437" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/frame {'id': None}</msg>
+<msg time="2024-03-25T23:42:07.334437" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/frame HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:07.334437" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:07.335438" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:07.335438" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': "//*[contains(., 'qaknimeweb')]"}</msg>
+<msg time="2024-03-25T23:42:07.345440" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:07.345440" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.128"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.129"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.130"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.131"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.132"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.133"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.134"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.135"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.136"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.137"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.138"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.139"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.140"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.141"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.142"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.143"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.144"}]} | headers=HTTPHeaderDict({'Content-Length': '2017', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:07.345440" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:07.345440" level="INFO">Current page contains text 'qaknimeweb'.</msg>
+<msg time="2024-03-25T23:42:07.345440" level="TRACE">Return: None</msg>
+<arg>${username}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-03-25T23:42:07.333437" elapsed="0.012003"/>
+</kw>
+<msg time="2024-03-25T23:42:07.345440" level="TRACE">Return: None</msg>
+<arg>${VALID USERNAME}</arg>
+<status status="PASS" start="2024-03-25T23:42:07.332426" elapsed="0.013014"/>
+</kw>
+<status status="PASS" start="2024-03-25T23:41:50.395762" elapsed="16.949678"/>
+</test>
+<test id="s1-t2" name="Navigate To Spaces Page" line="22">
+<kw name="Open Spaces Page" owner="keywords">
+<msg time="2024-03-25T23:42:07.347440" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:07.347440" level="TRACE">Arguments: [ '//*[@id="__layout"]/div/div[1]/header/nav/div[2]/div/button/div/div/div' ]</msg>
+<msg time="2024-03-25T23:42:07.347440" level="INFO">Clicking element '//*[@id="__layout"]/div/div[1]/header/nav/div[2]/div/button/div/div/div'.</msg>
+<msg time="2024-03-25T23:42:07.347440" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': '//*[@id="__layout"]/div/div[1]/header/nav/div[2]/div/button/div/div/div'}</msg>
+<msg time="2024-03-25T23:42:07.354442" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:07.354442" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.145"}]} | headers=HTTPHeaderDict({'Content-Length': '129', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:07.354442" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:07.354442" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.145/click {}</msg>
+<msg time="2024-03-25T23:42:07.377437" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.145/click HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:07.377437" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:07.377437" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:07.378437" level="TRACE">Return: None</msg>
+<arg>${USER ICON XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T23:42:07.347440" elapsed="0.030997"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:07.378437" level="TRACE">Arguments: [ '//*[@id="__layout"]/div/div[1]/header/nav/div[2]/div/div/ul/li[1]/a/div/span' ]</msg>
+<msg time="2024-03-25T23:42:07.378437" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': '//*[@id="__layout"]/div/div[1]/header/nav/div[2]/div/div/ul/li[1]/a/div/span'}</msg>
+<msg time="2024-03-25T23:42:07.385439" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:07.386440" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.143"}]} | headers=HTTPHeaderDict({'Content-Length': '129', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:07.386440" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:07.386440" level="DEBUG">GET http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.143/enabled {}</msg>
+<msg time="2024-03-25T23:42:07.403443" level="DEBUG">http://localhost:55530 "GET /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.143/enabled HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:07.403443" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:07.403443" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:07.404443" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.143'}, 'readonly']}</msg>
+<msg time="2024-03-25T23:42:07.407444" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:07.407444" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:07.408444" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:07.408444" level="TRACE">Return: None</msg>
+<arg>${USER SPACES BUTTON XPATH}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-03-25T23:42:07.378437" elapsed="0.030007"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:07.408444" level="TRACE">Arguments: [ '//*[@id="__layout"]/div/div[1]/header/nav/div[2]/div/div/ul/li[1]/a/div/span' ]</msg>
+<msg time="2024-03-25T23:42:07.408444" level="INFO">Clicking element '//*[@id="__layout"]/div/div[1]/header/nav/div[2]/div/div/ul/li[1]/a/div/span'.</msg>
+<msg time="2024-03-25T23:42:07.408444" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': '//*[@id="__layout"]/div/div[1]/header/nav/div[2]/div/div/ul/li[1]/a/div/span'}</msg>
+<msg time="2024-03-25T23:42:07.413445" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:07.413445" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.143"}]} | headers=HTTPHeaderDict({'Content-Length': '129', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:07.413445" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:07.414446" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.143/click {}</msg>
+<msg time="2024-03-25T23:42:07.434450" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.143/click HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:07.434450" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:07.434450" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:07.434450" level="TRACE">Return: None</msg>
+<arg>${USER SPACES BUTTON XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T23:42:07.408444" elapsed="0.026006"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T23:42:07.434450" level="TRACE">Arguments: [ '1' ]</msg>
+<msg time="2024-03-25T23:42:08.435951" level="INFO">Slept 1 second.</msg>
+<msg time="2024-03-25T23:42:08.435951" level="TRACE">Return: None</msg>
+<arg>${SMALL DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T23:42:07.434450" elapsed="1.001501"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:08.435951" level="TRACE">Arguments: [ 'Your spaces – KNIME Community Hub' ]</msg>
+<msg time="2024-03-25T23:42:08.435951" level="DEBUG">GET http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/title {}</msg>
+<msg time="2024-03-25T23:42:08.435951" level="DEBUG">http://localhost:55530 "GET /session/515ae6e0391632a3616bd8e799036f27/title HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:08.435951" level="DEBUG">Remote response: status=200 | data={"value":"Your spaces – KNIME Community Hub"} | headers=HTTPHeaderDict({'Content-Length': '47', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:08.438963" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:08.438963" level="INFO">Page title is 'Your spaces – KNIME Community Hub'.</msg>
+<msg time="2024-03-25T23:42:08.438963" level="TRACE">Return: None</msg>
+<arg>${YOUR SPACES TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-03-25T23:42:08.435951" elapsed="0.003012"/>
+</kw>
+<msg time="2024-03-25T23:42:08.438963" level="TRACE">Return: None</msg>
+<status status="PASS" start="2024-03-25T23:42:07.347440" elapsed="1.091523"/>
+</kw>
+<status status="PASS" start="2024-03-25T23:42:07.346431" elapsed="1.092532"/>
+</test>
+<test id="s1-t3" name="New Public Space" line="25">
+<kw name="Create New Public Space" owner="keywords">
+<msg time="2024-03-25T23:42:08.438963" level="TRACE">Arguments: [ ${newSpaceName}='myNewSpace' | ${username}='qaknimeweb' ]</msg>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:08.438963" level="TRACE">Arguments: [ '//*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div/div[2]/ul/li[3]/div/div/button[2]' ]</msg>
+<msg time="2024-03-25T23:42:08.438963" level="INFO">Clicking element '//*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div/div[2]/ul/li[3]/div/div/button[2]'.</msg>
+<msg time="2024-03-25T23:42:08.438963" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': '//*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div/div[2]/ul/li[3]/div/div/button[2]'}</msg>
+<msg time="2024-03-25T23:42:08.447929" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:08.447929" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.153"}]} | headers=HTTPHeaderDict({'Content-Length': '129', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:08.447929" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:08.447929" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.153/click {}</msg>
+<msg time="2024-03-25T23:42:08.468918" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.153/click HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:08.468918" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:08.468918" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:08.468918" level="TRACE">Return: None</msg>
+<arg>${PUBLIC SPACE XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T23:42:08.438963" elapsed="0.029955"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T23:42:08.468918" level="TRACE">Arguments: [ '2' ]</msg>
+<msg time="2024-03-25T23:42:10.469252" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-25T23:42:10.469252" level="TRACE">Return: None</msg>
+<arg>${CHANGING PAGE DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T23:42:08.468918" elapsed="2.000334"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:10.469252" level="TRACE">Arguments: [ 'qaknimeweb/New space – KNIME Community Hub' ]</msg>
+<msg time="2024-03-25T23:42:10.469252" level="DEBUG">GET http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/title {}</msg>
+<msg time="2024-03-25T23:42:10.472249" level="DEBUG">http://localhost:55530 "GET /session/515ae6e0391632a3616bd8e799036f27/title HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:10.472249" level="DEBUG">Remote response: status=200 | data={"value":"qaknimeweb/New space – KNIME Community Hub"} | headers=HTTPHeaderDict({'Content-Length': '56', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:10.472249" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:10.472249" level="INFO">Page title is 'qaknimeweb/New space – KNIME Community Hub'.</msg>
+<msg time="2024-03-25T23:42:10.472249" level="TRACE">Return: None</msg>
+<arg>${username}${EDITING SPACE TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-03-25T23:42:10.469252" elapsed="0.002997"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T23:42:10.472249" level="TRACE">Arguments: [ '2' ]</msg>
+<msg time="2024-03-25T23:42:12.472531" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-25T23:42:12.472531" level="TRACE">Return: None</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T23:42:10.472249" elapsed="2.000282"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:12.472531" level="TRACE">Arguments: [ '//*[@id="__layout"]/div/div[1]/main/section[1]/div/div/div/div[1]/h3/div/div/textarea' | 'myNewSpace' ]</msg>
+<msg time="2024-03-25T23:42:12.472531" level="INFO">Typing text 'myNewSpace' into text field '//*[@id="__layout"]/div/div[1]/main/section[1]/div/div/div/div[1]/h3/div/div/textarea'.</msg>
+<msg time="2024-03-25T23:42:12.472531" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': '//*[@id="__layout"]/div/div[1]/main/section[1]/div/div/div/div[1]/h3/div/div/textarea'}</msg>
+<msg time="2024-03-25T23:42:12.479049" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:12.479049" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.158"}]} | headers=HTTPHeaderDict({'Content-Length': '129', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:12.479049" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:12.479049" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.158/clear {}</msg>
+<msg time="2024-03-25T23:42:12.489039" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.158/clear HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:12.489039" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:12.489039" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:12.489039" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.158/value {'text': 'myNewSpace', 'value': ['m', 'y', 'N', 'e', 'w', 'S', 'p', 'a', 'c', 'e']}</msg>
+<msg time="2024-03-25T23:42:12.525004" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.158/value HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:12.525488" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:12.525488" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:12.525488" level="TRACE">Return: None</msg>
+<arg>${EDIT PUBLIC SPACE BOX XPATH}</arg>
+<arg>${newSpaceName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T23:42:12.472531" elapsed="0.052957"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T23:42:12.525488" level="TRACE">Arguments: [ '2' ]</msg>
+<msg time="2024-03-25T23:42:14.525508" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-25T23:42:14.525508" level="TRACE">Return: None</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T23:42:12.525488" elapsed="2.000020"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:14.525508" level="TRACE">Arguments: [ '//*[@id="__layout"]/div/div[1]/main/section[1]/div/div/div/div[1]/h3/div/div/div/button[1]' ]</msg>
+<msg time="2024-03-25T23:42:14.525508" level="INFO">Clicking element '//*[@id="__layout"]/div/div[1]/main/section[1]/div/div/div/div[1]/h3/div/div/div/button[1]'.</msg>
+<msg time="2024-03-25T23:42:14.525508" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': '//*[@id="__layout"]/div/div[1]/main/section[1]/div/div/div/div[1]/h3/div/div/div/button[1]'}</msg>
+<msg time="2024-03-25T23:42:14.533984" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:14.533984" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.162"}]} | headers=HTTPHeaderDict({'Content-Length': '129', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:14.533984" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:14.533984" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.162/click {}</msg>
+<msg time="2024-03-25T23:42:14.556988" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.162/click HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:14.556988" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:14.556988" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:14.556988" level="TRACE">Return: None</msg>
+<arg>${SAVE EDIT SPACE NAME XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T23:42:14.525508" elapsed="0.031480"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T23:42:14.557988" level="TRACE">Arguments: [ '2' ]</msg>
+<msg time="2024-03-25T23:42:16.558051" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-25T23:42:16.558051" level="TRACE">Return: None</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T23:42:14.557988" elapsed="2.000063"/>
+</kw>
+<msg time="2024-03-25T23:42:16.558051" level="TRACE">Return: None</msg>
+<arg>${SPACE NAME}</arg>
+<arg>${VALID USERNAME}</arg>
+<status status="PASS" start="2024-03-25T23:42:08.438963" elapsed="8.119088"/>
+</kw>
+<kw name="Space Should Be Created" owner="keywords">
+<msg time="2024-03-25T23:42:16.558051" level="TRACE">Arguments: [ ${newSpaceName}='myNewSpace' ]</msg>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T23:42:16.559059" level="TRACE">Arguments: [ '2' ]</msg>
+<msg time="2024-03-25T23:42:18.559487" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-25T23:42:18.559487" level="TRACE">Return: None</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T23:42:16.559053" elapsed="2.000434"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:18.559487" level="TRACE">Arguments: [ '//*[@id="__layout"]/div/div[1]/section/nav/ul/li[4]/span' | 'myNewSpace' ]</msg>
+<msg time="2024-03-25T23:42:18.559487" level="INFO">Verifying element '//*[@id="__layout"]/div/div[1]/section/nav/ul/li[4]/span' contains exact text 'myNewSpace'.</msg>
+<msg time="2024-03-25T23:42:18.559487" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': '//*[@id="__layout"]/div/div[1]/section/nav/ul/li[4]/span'}</msg>
+<msg time="2024-03-25T23:42:18.568485" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:18.569493" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.166"}]} | headers=HTTPHeaderDict({'Content-Length': '129', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:18.569493" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:18.569493" level="DEBUG">GET http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.166/text {}</msg>
+<msg time="2024-03-25T23:42:18.578494" level="DEBUG">http://localhost:55530 "GET /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.166/text HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:18.578494" level="DEBUG">Remote response: status=200 | data={"value":"myNewSpace"} | headers=HTTPHeaderDict({'Content-Length': '22', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:18.578494" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:18.578494" level="TRACE">Return: None</msg>
+<arg>${CURRENT SPACE NAME XPATH}</arg>
+<arg>${newSpaceName}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-03-25T23:42:18.559487" elapsed="0.019007"/>
+</kw>
+<msg time="2024-03-25T23:42:18.578494" level="TRACE">Return: None</msg>
+<arg>${SPACE NAME}</arg>
+<status status="PASS" start="2024-03-25T23:42:16.558051" elapsed="2.020443"/>
+</kw>
+<status status="PASS" start="2024-03-25T23:42:08.438963" elapsed="10.140532"/>
+</test>
+<test id="s1-t4" name="Delete Desire Space" line="29">
+<kw name="Delete Space" owner="keywords">
+<msg time="2024-03-25T23:42:18.579495" level="TRACE">Arguments: [ ${toDeleteSpaceName}='myNewSpace' ]</msg>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:18.580496" level="TRACE">Arguments: [ '//*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/button' ]</msg>
+<msg time="2024-03-25T23:42:18.580496" level="INFO">Clicking element '//*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/button'.</msg>
+<msg time="2024-03-25T23:42:18.580496" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': '//*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/button'}</msg>
+<msg time="2024-03-25T23:42:18.586497" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:18.586497" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.167"}]} | headers=HTTPHeaderDict({'Content-Length': '129', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:18.586497" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:18.586497" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.167/click {}</msg>
+<msg time="2024-03-25T23:42:18.612493" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.167/click HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:18.612493" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:18.612493" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:18.612493" level="TRACE">Return: None</msg>
+<arg>${SPACE MENU BUTTON XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T23:42:18.580496" elapsed="0.031997"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T23:42:18.612493" level="TRACE">Arguments: [ '2' ]</msg>
+<msg time="2024-03-25T23:42:20.613010" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-25T23:42:20.613010" level="TRACE">Return: None</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T23:42:18.612493" elapsed="2.000517"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:20.613010" level="TRACE">Arguments: [ '//*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/div/div[1]/div/button' ]</msg>
+<msg time="2024-03-25T23:42:20.613010" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': '//*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/div/div[1]/div/button'}</msg>
+<msg time="2024-03-25T23:42:20.619031" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:20.619031" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.168"}]} | headers=HTTPHeaderDict({'Content-Length': '129', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:20.619031" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:20.619031" level="DEBUG">GET http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.168/enabled {}</msg>
+<msg time="2024-03-25T23:42:20.619031" level="DEBUG">http://localhost:55530 "GET /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.168/enabled HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:20.619031" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:20.619031" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:20.619031" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.168'}, 'readonly']}</msg>
+<msg time="2024-03-25T23:42:20.619031" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/execute/sync HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:20.619031" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:20.619031" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:20.619031" level="TRACE">Return: None</msg>
+<arg>${DELETE SPACE BUTTON XPATH}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-03-25T23:42:20.613010" elapsed="0.006021"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:20.619031" level="TRACE">Arguments: [ '//*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/div/div[1]/div/button' ]</msg>
+<msg time="2024-03-25T23:42:20.619031" level="INFO">Clicking element '//*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/div/div[1]/div/button'.</msg>
+<msg time="2024-03-25T23:42:20.619031" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': '//*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/div/div[1]/div/button'}</msg>
+<msg time="2024-03-25T23:42:20.629016" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:20.629016" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.168"}]} | headers=HTTPHeaderDict({'Content-Length': '129', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:20.629016" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:20.629016" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.168/click {}</msg>
+<msg time="2024-03-25T23:42:20.649083" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.168/click HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:20.649083" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:20.649083" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:20.649083" level="TRACE">Return: None</msg>
+<arg>${DELETE SPACE BUTTON XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T23:42:20.619031" elapsed="0.030052"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T23:42:20.649083" level="TRACE">Arguments: [ '2' ]</msg>
+<msg time="2024-03-25T23:42:22.649419" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-25T23:42:22.649419" level="TRACE">Return: None</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T23:42:20.649083" elapsed="2.000336"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:22.649419" level="TRACE">Arguments: [ '//*[@id="confirmationForm"]/div/input' | 'myNewSpace' ]</msg>
+<msg time="2024-03-25T23:42:22.649419" level="INFO">Typing text 'myNewSpace' into text field '//*[@id="confirmationForm"]/div/input'.</msg>
+<msg time="2024-03-25T23:42:22.649419" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': '//*[@id="confirmationForm"]/div/input'}</msg>
+<msg time="2024-03-25T23:42:22.657415" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:22.657415" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.170"}]} | headers=HTTPHeaderDict({'Content-Length': '129', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:22.657415" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:22.657415" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.170/clear {}</msg>
+<msg time="2024-03-25T23:42:22.680430" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.170/clear HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:22.680430" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:22.680430" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:22.680430" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.170/value {'text': 'myNewSpace', 'value': ['m', 'y', 'N', 'e', 'w', 'S', 'p', 'a', 'c', 'e']}</msg>
+<msg time="2024-03-25T23:42:22.706428" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.170/value HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:22.706428" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:22.706428" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:22.706428" level="TRACE">Return: None</msg>
+<arg>${DELETE SPACE NAME BOX XPATH}</arg>
+<arg>${toDeleteSpaceName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T23:42:22.649419" elapsed="0.057009"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T23:42:22.706428" level="TRACE">Arguments: [ '2' ]</msg>
+<msg time="2024-03-25T23:42:24.706501" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-03-25T23:42:24.706501" level="TRACE">Return: None</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T23:42:22.706428" elapsed="2.000073"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:24.706501" level="TRACE">Arguments: [ '//*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/div/div[1]/div[2]/div[2]/div/div[4]/button' ]</msg>
+<msg time="2024-03-25T23:42:24.706501" level="INFO">Clicking element '//*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/div/div[1]/div[2]/div[2]/div/div[4]/button'.</msg>
+<msg time="2024-03-25T23:42:24.706501" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': '//*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/div/div[1]/div[2]/div[2]...'}</msg>
+<msg time="2024-03-25T23:42:24.709013" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:24.709013" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.175"}]} | headers=HTTPHeaderDict({'Content-Length': '129', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:24.709013" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:24.709013" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.175/click {}</msg>
+<msg time="2024-03-25T23:42:24.737867" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/element/f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.175/click HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:24.737867" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:24.738668" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:24.738668" level="TRACE">Return: None</msg>
+<arg>${DELETE CONFIRMATION BUTTON XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T23:42:24.706501" elapsed="0.032167"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" owner="SeleniumLibrary">
+<msg time="2024-03-25T23:42:24.738668" level="TRACE">Arguments: [ 'myNewSpace' | datetime.timedelta(seconds=2) ]</msg>
+<msg time="2024-03-25T23:42:24.738668" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': "//*[contains(., 'myNewSpace')]"}</msg>
+<msg time="2024-03-25T23:42:24.748719" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:24.748719" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.128"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.177"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.178"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.129"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.130"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.179"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.180"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.181"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.182"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.183"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.184"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.185"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.166"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.186"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.187"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.188"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.189"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.190"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.191"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.192"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.193"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.194"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.172"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.195"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.196"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.197"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.198"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.199"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.200"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.201"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.202"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.203"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.204"}]} | headers=HTTPHeaderDict({'Content-Length': '3905', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:24.748719" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:24.949359" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': "//*[contains(., 'myNewSpace')]"}</msg>
+<msg time="2024-03-25T23:42:24.949359" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:24.949359" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.128"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.177"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.178"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.129"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.130"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.179"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.180"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.181"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.182"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.183"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.184"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.185"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.166"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.186"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.187"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.188"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.189"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.190"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.191"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.192"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.193"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.194"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.172"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.195"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.196"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.197"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.198"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.199"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.200"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.201"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.202"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.203"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.204"}]} | headers=HTTPHeaderDict({'Content-Length': '3905', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:24.949359" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:25.157089" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': "//*[contains(., 'myNewSpace')]"}</msg>
+<msg time="2024-03-25T23:42:25.162944" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:25.162944" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.128"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.177"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.178"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.129"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.130"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.179"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.180"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.181"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.182"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.183"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.184"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.185"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.166"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.186"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.187"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.188"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.189"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.190"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.191"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.192"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.193"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.194"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.172"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.195"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.196"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.197"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.198"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.199"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.200"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.201"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.202"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.203"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.204"}]} | headers=HTTPHeaderDict({'Content-Length': '3905', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:25.162944" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:25.364004" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': "//*[contains(., 'myNewSpace')]"}</msg>
+<msg time="2024-03-25T23:42:25.369026" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:25.369026" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.128"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.177"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.178"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.129"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.130"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.179"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.180"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.181"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.182"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.183"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.184"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.185"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.166"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.186"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.187"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.188"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.189"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.190"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.191"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.192"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.193"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.194"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.172"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.195"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.196"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.197"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.198"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.199"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.200"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.201"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.202"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.203"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.204"}]} | headers=HTTPHeaderDict({'Content-Length': '3905', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:25.369026" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:25.571518" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': "//*[contains(., 'myNewSpace')]"}</msg>
+<msg time="2024-03-25T23:42:25.571518" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:25.571518" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.128"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.177"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.178"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.129"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.130"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.179"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.180"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.181"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.182"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.183"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.184"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.185"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.166"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.186"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.187"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.188"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.189"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.190"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.191"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.192"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.193"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.194"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.172"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.195"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.196"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.197"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.198"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.199"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.200"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.201"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.202"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.203"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.204"}]} | headers=HTTPHeaderDict({'Content-Length': '3905', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:25.571518" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:25.778278" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': "//*[contains(., 'myNewSpace')]"}</msg>
+<msg time="2024-03-25T23:42:25.784797" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:25.784797" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.128"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.177"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.178"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.129"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.130"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.179"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.180"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.181"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.182"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.183"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.184"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.185"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.166"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.186"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.187"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.188"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.189"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.190"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.191"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.192"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.193"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.194"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.172"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.195"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.196"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.197"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.198"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.199"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.200"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.201"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.202"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.203"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.204"}]} | headers=HTTPHeaderDict({'Content-Length': '3905', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:25.784797" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:25.985572" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': "//*[contains(., 'myNewSpace')]"}</msg>
+<msg time="2024-03-25T23:42:25.991585" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:25.991585" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.128"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.177"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.178"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.129"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.130"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.179"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.180"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.181"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.182"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.183"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.184"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.185"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.166"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.186"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.187"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.188"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.189"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.190"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.191"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.192"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.193"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.194"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.172"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.195"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.196"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.197"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.198"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.199"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.200"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.201"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.202"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.203"},{"element-6066-11e4-a52e-4f735466cecf":"f.F873D199CC6F4A76EA3977A63D6A8C81.d.E8ECEA0053958CD30F29158C01F318C9.e.204"}]} | headers=HTTPHeaderDict({'Content-Length': '3905', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:25.991585" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:26.192493" level="DEBUG">POST http://localhost:55530/session/515ae6e0391632a3616bd8e799036f27/elements {'using': 'xpath', 'value': "//*[contains(., 'myNewSpace')]"}</msg>
+<msg time="2024-03-25T23:42:26.198506" level="DEBUG">http://localhost:55530 "POST /session/515ae6e0391632a3616bd8e799036f27/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-25T23:42:26.198506" level="DEBUG">Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-25T23:42:26.198506" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-25T23:42:26.198506" level="TRACE">Return: None</msg>
+<arg>${toDeleteSpaceName}</arg>
+<arg>${DELAY}</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" start="2024-03-25T23:42:24.738668" elapsed="1.459838"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T23:42:26.198506" level="TRACE">Arguments: [ '10' ]</msg>
+<msg time="2024-03-25T23:42:36.198702" level="INFO">Slept 10 seconds.</msg>
+<msg time="2024-03-25T23:42:36.198702" level="TRACE">Return: None</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T23:42:26.198506" elapsed="10.000196"/>
+</kw>
+<msg time="2024-03-25T23:42:36.198702" level="TRACE">Return: None</msg>
+<arg>${SPACE NAME}</arg>
+<status status="PASS" start="2024-03-25T23:42:18.579495" elapsed="17.619207"/>
+</kw>
+<status status="PASS" start="2024-03-25T23:42:18.579495" elapsed="17.619717"/>
+</test>
+<doc>Running TestSuite - add / delete public space</doc>
+<status status="PASS" start="2024-03-25T23:41:50.235726" elapsed="45.963486"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="TestSuite">TestSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

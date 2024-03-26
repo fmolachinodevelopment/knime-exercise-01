@@ -9,6 +9,7 @@ Resource           keywords.resource
 #Credentials
 ${VALID USERNAME}       qaknimeweb
 ${VALID PASSWORD}       0qAknimeweb0_
+${SPACE NAME}           myNewSpace
 
 *** Test Cases ***
 Valid Login
@@ -20,6 +21,15 @@ Valid Login
 
 Navigate To Spaces Page
     Open Spaces Page
+
+New Public Space
+    Create New Public Space    ${SPACE NAME}    ${VALID USERNAME}
+    Space Should Be Created    ${SPACE NAME}
+
+Delete Desire Space
+    Delete Space    ${SPACE NAME}
+
+
 
 
 
