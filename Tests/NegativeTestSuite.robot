@@ -19,3 +19,4 @@ Invalid Login
     Input Password           ${INVALID PASSWORD}
     Submit Wrong Credentials
     Wrong Credentials Alert Should Be Present
+    Close Browser

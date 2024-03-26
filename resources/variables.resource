@@ -10,7 +10,8 @@ Documentation    Resource for variables - any change on XPATH or other selector 
 ${SMALL DELAY}                1
 ${CHANGING PAGE DELAY}        2
 ${DELAY}                      4
-${WAIT TIMEOUT}               5
+${WAIT TIMEOUT}               7
+${SELENIUM SPEED}             0 seconds
 
 #Browser and url variables
 ${HUB PAGE URL}                         https://hub.knime.com/
@@ -22,26 +23,25 @@ ${EDITING SPACE TITLE}                  /New space – KNIME Community Hub
 ${CREATE NEW SPACE TEXT}                Create new space
 
 #Selectors variables                    
-${CLOSE COOKIES WINDOW XPATH}           //*[@id="__layout"]/div/div[4]/div[2]/div/div[1]/button
-${SIGN IN BUTTON XPATH}                 //*[@id="__layout"]/div/div[1]/header/nav/div[2]/button
+${CLOSE COOKIES WINDOW}           //*[@id="__layout"]/div/div[4]/div[2]/div/div[1]/button
+${SIGN IN BUTTON}                 //*[@id="__layout"]/div/div[1]/header/nav/div[2]/button
 ${INPUT USERNAME ID}                    edit-name
 ${INPUT PASSWORD ID}                    edit-pass
 ${SIGN IN SUBMIT ID}                    edit-submit
-${USER ICON XPATH}                      //*[@id="__layout"]/div/div[1]/header/nav/div[2]/div/button/div/div/div
-${USER SPACES BUTTON XPATH}             //*[@id="__layout"]/div/div[1]/header/nav/div[2]/div/div/ul/li[1]/a/div/span
+${USER ICON}                      //*[@id="__layout"]/div/div[1]/header/nav/div[2]/div/button/div/div/div
+${USER SPACES BUTTON}             //*[@id="__layout"]/div/div[1]/header/nav/div[2]/div/div/ul/li[1]/a/div/span
 
-${YOUR SPACES TITLE XPATH}                   //*[@id="__layout"]/div/div[1]/main/section/div/div[2]/div/h2
+${YOUR SPACES TITLE SEL}              //*[@id="__layout"]/div/div[1]/main/section/div/div[2]/div/h2
 
-${EDIT PUBLIC SPACE BOX XPATH}          //*[@id="__layout"]/div/div[1]/main/section[1]/div/div/div/div[1]/h3/div/div/textarea
-${SAVE EDIT SPACE NAME XPATH}           //*[@id="__layout"]/div/div[1]/main/section[1]/div/div/div/div[1]/h3/div/div/div/button[1]
-${CURRENT SPACE NAME XPATH}             //*[@id="__layout"]/div/div[1]/section/nav/ul/li[4]/span
-${SPACE MENU BUTTON XPATH}              //*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/button
-${DELETE SPACE BUTTON XPATH}            //*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/div/div[1]/div/button
-${DELETE SPACE NAME BOX XPATH}          //*[@id="confirmationForm"]/div/input
-${DELETE CONFIRMATION BUTTON XPATH}     //*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/div/div[1]/div[2]/div[2]/div/div[4]/button
-${INVALID CREDENTIALS ALERT XPATH}      //*[@id="user-login-form"]/div[1]/div[1]
-
-${SPACES COUNT XPATH}                   //*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div/div[1]/div/div/div/div[2]/div[1]/div/em[2]
+${EDIT PUBLIC SPACE BOX}          //*[@id="__layout"]/div/div[1]/main/section[1]/div/div/div/div[1]/h3/div/div/textarea
+${SAVE EDIT SPACE NAME}           //*[@id="__layout"]/div/div[1]/main/section[1]/div/div/div/div[1]/h3/div/div/div/button[1]
+${CURRENT SPACE NAME}             //*[@id="__layout"]/div/div[1]/section/nav/ul/li[4]/span
+${SPACE MENU BUTTON}              //*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/button
+${DELETE SPACE BUTTON}            //*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/div/div[1]/div/button
+${DELETE SPACE NAME BOX}          //*[@id="confirmationForm"]/div/input
+${DELETE CONFIRMATION BUTTON}     //*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/div/div[1]/div[2]/div[2]/div/div[4]/button
+${INVALID CREDENTIALS ALERT}      //*[@id="user-login-form"]/div[1]/div[1]
+${SPACES COUNT}                   //*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div/div[1]/div/div/div/div[2]/div[1]/div/em[2]
 
 
 

@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation           Running TestSuite - If executed via .bat file, the reports
-...                     will be store in the output directory.                    
+...                     will be store in the output directory.            
 
 Resource                ../resources/variables.resource
 Resource                ../resources/keywords.resource
