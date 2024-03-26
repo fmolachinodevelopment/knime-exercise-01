@@ -1,5 +1,7 @@
 *** Settings ***
-Documentation      Running TestSuite - add / delete public space
+Documentation      Running TestSuite - If executed via .bat file, the reports will be store
+...                in the Output directory.
+
 Resource           variables.resource
 Resource           keywords.resource
 
