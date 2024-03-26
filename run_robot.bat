@@ -8,4 +8,4 @@ if "%~1"=="" (
 )
 
 rem Run the robot command with the provided directory path
-robot -d Output --loglevel TRACE %~1\
+robot -d output --loglevel TRACE %~1\
