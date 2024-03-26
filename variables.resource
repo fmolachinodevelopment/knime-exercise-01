@@ -1,10 +1,13 @@
 *** Settings ***
-Documentation    Resource for variables
+Documentation    Resource for variables - any change on XPATH or other selector must be 
+...              updated here. If running the tests more close to the web host
+...              you should consider to lower the delay rates. It will optimize the 
+...              execution times.
 
 
 *** Variables ***
 ${SMALL DELAY}                1
-${DELAY}                      2
+${DELAY}                      3
 ${CHANGING PAGE DELAY}        2
 
 #Browser and url variables
@@ -34,13 +37,10 @@ ${SPACE MENU BUTTON XPATH}              //*[@id="__layout"]/div/div[1]/main/sect
 ${DELETE SPACE BUTTON XPATH}            //*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/div/div[1]/div/button
 ${DELETE SPACE NAME BOX XPATH}          //*[@id="confirmationForm"]/div/input
 ${DELETE CONFIRMATION BUTTON XPATH}     //*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/div/div[1]/div[2]/div[2]/div/div[4]/button
+${INVALID CREDENTIALS ALERT XPATH}      //*[@id="user-login-form"]/div[1]/div[1]
 #UL should contain only 3 li / OR withing the li elements should not be the one with the space name created
 ${SPACES UL XPATH}                      //*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div/div[2]/ul
 
-
-#Credentials
-#${VALID USERNAME}       qaknimeweb
-${VALID PASSWORD}       0qAknimeweb0_
 
 
 

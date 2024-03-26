@@ -1,9 +1,9 @@
 *** Settings ***
-Documentation      Running TestSuite - If executed via .bat file, the reports will be store
-...                in the Output directory.
+Documentation           Running TestSuite - If executed via .bat file, the reports will be store
+...                     in the Output directory.
 
-Resource           variables.resource
-Resource           keywords.resource
+Resource                variables.resource
+Resource                keywords.resource
 
 *** Keywords ***
 
@@ -11,13 +11,17 @@ Resource           keywords.resource
 #Credentials
 ${VALID USERNAME}       qaknimeweb
 ${VALID PASSWORD}       0qAknimeweb0_
+
+${INVALID USERNAME}     notusername
+${INVALID PASSWORD}     notpassword
+
 ${SPACE NAME}           myNewSpace
 
 *** Test Cases ***
 Valid Login
     Open Browser To Login Page
-    Input Username    ${VALID USERNAME}
-    Input Password    ${VALID PASSWORD}
+    Input Username           ${VALID USERNAME}
+    Input Password           ${VALID PASSWORD}
     Submit Credentials
     User Should Be Logged    ${VALID USERNAME}
 
@@ -31,8 +35,12 @@ New Public Space
 Delete Desire Space
     Delete Space    ${SPACE NAME}
 
-
-
+# Invalid Login
+#     Open Browser To Login Page
+#     Input Username           ${VALID USERNAME}
+#     Input Password           ${VALID PASSWORD}
+#     Submit Credentials
+#     Wrong Credentials Alert Should Be Present
 
 
 
