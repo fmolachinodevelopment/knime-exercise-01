@@ -12,7 +12,15 @@ ${VALID PASSWORD}       0qAknimeweb0_
 
 *** Test Cases ***
 Valid Login
-    Open Browser To Login Page  
+    Open Browser To Login Page
     Input Username    ${VALID USERNAME}
-    Sleep    ${DELAY}
     Input Password    ${VALID PASSWORD}
+    Submit Credentials
+    User Should Be Logged    ${VALID USERNAME}
+
+Navigate To Spaces Page
+    Open Spaces Page
+
+
+
+

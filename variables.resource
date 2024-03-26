@@ -3,13 +3,16 @@ Documentation    Resource for variables
 
 
 *** Variables ***
+${SMALL DELAY}                      2
 ${DELAY}                      2
 ${CHANGING PAGE DELAY}        3
 
 #Browser and url variables
 ${HUB PAGE URL}                         https://hub.knime.com/
 ${BROWSER CHROME}                       Chrome
+${HUB TITLE}                            KNIME Community Hub
 ${LOG IN PAGE TITLE}                    Log in | KNIME
+${YOUR SPACES TITLE}                    Your spaces – KNIME Community Hub
 
 #Selectors variables                    
 ${CLOSE COOKIES WINDOW XPATH}           //*[@id="__layout"]/div/div[4]/div[2]/div/div[1]/button
