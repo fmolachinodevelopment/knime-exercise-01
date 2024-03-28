@@ -5,26 +5,26 @@ Resource    variables.resource
 
 *** Keywords ***
 Open Browser To Login Page
-    Open Browser          ${HUB PAGE URL}    ${BROWSER CHROME}
+    Open Browser          ${HUB PAGE URL}    ${BROWSER}
     Set Selenium Speed    ${SELENIUM SPEED}  
     Wait Until Element Is Visible    ${CLOSE COOKIES WINDOW}    ${WAIT TIMEOUT}
     Title Should Be       ${HUB TITLE}
     Maximize Browser Window
     Click Element         ${CLOSE COOKIES WINDOW}
     Click Element         ${SIGN IN BUTTON}
-    Wait Until Page Contains Element    ${INPUT USERNAME ID}    ${WAIT TIMEOUT}
+    Wait Until Page Contains Element    ${INPUT USERNAME}    ${WAIT TIMEOUT}
     Title Should Be       ${LOG IN PAGE TITLE}
 
 Input Username
     [Arguments]           ${username}
-    Input Text            ${INPUT USERNAME ID}      ${username}
+    Input Text            ${INPUT USERNAME}      ${username}
 
 Input Password
     [Arguments]           ${password}
-    Input Text            ${INPUT PASSWORD ID}      ${password}
+    Input Text            ${INPUT PASSWORD}      ${password}
 
 Submit Credentials
-    Click Element         ${SIGN IN SUBMIT ID}
+    Click Element         ${SIGN IN SUBMIT}
     Wait Until Page Contains Element    ${USER ICON}    ${WAIT TIMEOUT}
 
 User Should Be Logged
@@ -40,7 +40,7 @@ Open Spaces Page
 
 #Needed to use js, because if there are more than 3 li elements in the ul of my spaces, the xpath of create new
 #space button changes because of the list length. 
-Create New Public Space 
+Create New Public Space
     [Arguments]        ${newSpaceName}    ${username}
     ${public_space}    Execute JavaScript    return document.evaluate("//button[contains(., 'Public space')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
     Click Element      ${public_space}
@@ -69,11 +69,8 @@ Delete Space
     
 
 Submit Wrong Credentials
-    Click Element       ${SIGN IN SUBMIT ID}
-    Wait Until Page Contains Element    ${INPUT USERNAME ID}    ${WAIT TIMEOUT}
-
-Wrong Credentials Alert Should Be Present 
-   Page Should Contain Element    ${INVALID CREDENTIALS ALERT}
+    Click Element       ${SIGN IN SUBMIT}
+    Wait Until Page Contains Element    ${INPUT USERNAME}    ${WAIT TIMEOUT}
 
 
 

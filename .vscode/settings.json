@@ -1,0 +1,3 @@
+{
+    "robotcode.robot.args": ["--log-level", "DEBUG"]
+}
