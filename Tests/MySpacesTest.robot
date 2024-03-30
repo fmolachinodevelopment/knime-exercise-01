@@ -1,7 +1,7 @@
 *** Settings ***
-Documentation           Basic Login Test
-Resource                ../resources/commonFunctionality.resource
-Resource                ../resources/mySpaceKeywords.resource
+Documentation           MySpace page test suite
+Resource                ../resources/mySpacePage.resource
+Resource                ../resources/loginPage.resource
 
 #Before starting the test cases the following Setup will be executed.
 #After the test end, the teadown occurs.
@@ -24,9 +24,11 @@ ${CREATE N PUBLIC SPACES}    1
 Create New Public Space
     Go To My Spaces
     My Spaces Page Should Be Open
-    Create New Public Space    ${SPACE NAME}    ${VALID USERNAME}
+    Create New Named Public Space    ${SPACE NAME}    ${VALID USERNAME}
     Space Should Be Created    ${SPACE NAME}
+    [Teardown]    Clear Created Space    ${SPACE NAME}
 
+#Create New Space With Existant Name (duplicated)
 
 *** Keywords ***
 Login Setup

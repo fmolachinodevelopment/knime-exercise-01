@@ -1,7 +1,6 @@
 *** Settings ***
-Documentation           Basic Login Test
-Resource                ../resources/commonFunctionality.resource
-Resource                ../resources/loginKeywords.resource
+Documentation           Login page test suite
+Resource                ../resources/loginPage.resource
 
 #Before starting the test cases the following Setup will be executed.
 #After the test end, the teadown occurs.
