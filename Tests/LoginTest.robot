@@ -32,10 +32,6 @@ Verify Invalid Login
     Submit Credentials
     Wrong Credentials Alert Should Be Present
 
-#Missing Password Login
-    #TODO
-    #Should Fail Log In
-
 Verify Logout
     [Documentation]       Verifies the logout case
     Go To Login Page
@@ -43,3 +39,15 @@ Verify Logout
     Submit Credentials
     Logout From Hub
     User Should Be Logged Out
+    
+Missing Password Login
+    Go To Login Page
+    Input Username    ${VALID USERNAME}
+    Submit Credentials
+    Missing Password Alert Should Be Present
+
+Missing Username Login
+    Go To Login Page
+    Input Password    ${VALID PASSWORD}
+    Submit Credentials
+    Missing Username Alert Should Be Present

@@ -7,7 +7,7 @@ Documentation    Resource for common variables, like the user icon...
 ${HUB PAGE URL}               https://hub.knime.com/
 ${BROWSER}                    Chrome
 #Timeouts and delay vars:
-${WAIT TIMEOUT}               4
+${WAIT TIMEOUT}               3
 ${SELENIUM SPEED}             0 seconds
-#Elements
-${USER ICON}                  //*[@id="__layout"]/div/div[1]/header/nav/div[2]/div/button/div/div/div
+#Selectors variables:
+${USER ICON}                  css:nav[role="navigation"] div[class="login"] button
