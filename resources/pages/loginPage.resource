@@ -8,11 +8,12 @@ Resource    ../resources/common.resource
 #Str variables:
 ${HUB TITLE}                      KNIME Community Hub
 ${LOG IN PAGE TITLE}              Log in | KNIME
+#Locators:
 ${CLOSE COOKIES WINDOW}           //*[@id="__layout"]/div/div[4]/div[2]/div/div[1]/button
 ${SIGN IN BUTTON}                 //*[@id="__layout"]/div/div[1]/header/nav/div[2]/button
-${INPUT USERNAME}                 edit-name
-${INPUT PASSWORD}                 edit-pass
-${SIGN IN SUBMIT}                 edit-submit
+${INPUT USERNAME}                 id:edit-name
+${INPUT PASSWORD}                 id:edit-pass
+${SUBMIT CREDENTIALS BUTTON}      id:edit-submit
 ${LOGOUT BUTTON}                  css:div[class="login"] ul [href="/_/auth/logout"]
 ${INVALID CREDENTIALS ALERT}      //*[@id="user-login-form"]/div[1]/div[1]
 ${MISSING PASS ALERT}             //form[@id="user-login-form"]//div[contains(., "Password field is required.")]
@@ -22,6 +23,7 @@ ${MISSIN USERNAME ALERT}          //form[@id="user-login-form"]//div[contains(.,
 *** Keywords ***
 #Starts engine, enters hub page and close cookies pop up.
 Start Basic Setup
+    [Documentation]    Open browser, set selenium speed, maximize window and close the cookies pop up.
     Open Browser          ${HUB PAGE URL}    ${BROWSER}
     Set Selenium Speed    ${SELENIUM SPEED}
     Maximize Browser Window
@@ -29,9 +31,11 @@ Start Basic Setup
     Click Element         ${CLOSE COOKIES WINDOW}
 
 Close Application
+    [Documentation]    Close browser
     Close Browser
 
 Go To Login Page
+    [Documentation]    Navigate to login page, by clicking sign in button
     Wait Until Page Contains Element    ${SIGN IN BUTTON}
     Click Element         ${SIGN IN BUTTON}
     Wait Until Page Contains Element    ${INPUT USERNAME}    ${WAIT TIMEOUT}
@@ -50,7 +54,7 @@ Input Password
     Input Text            ${INPUT PASSWORD}      ${password}
 
 Submit Credentials
-    Click Element         ${SIGN IN SUBMIT}
+    Click Element         ${SUBMIT CREDENTIALS BUTTON}
 
 Log Out From Hub
     Click Element                ${USER ICON}

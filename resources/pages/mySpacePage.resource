@@ -19,7 +19,7 @@ ${SPACE MENU BUTTON}              //*[@id="__layout"]/div/div[1]/main/section[2]
 ${DELETE SPACE BUTTON}            //*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/div/div[1]/div/button
 ${DELETE SPACE NAME BOX}          //*[@id="confirmationForm"]/div/input
 ${DELETE CONFIRMATION BUTTON}     //*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div[2]/div[3]/div/div/div[1]/div[2]/div[2]/div/div[4]/button
-${SPACES COUNT}                   //*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div/div[1]/div/div/div/div[2]/div[1]/div/em[2]
+#${SPACES COUNT}                   //*[@id="__layout"]/div/div[1]/main/section[2]/div/div[2]/div/div[1]/div/div/div/div[2]/div[1]/div/em[2]
 ${CREATE NEW PUBLIC SPACE BTN}    //div//button[contains(., "Public space")]
 ${FIRST NEW SPACE ON LIST}        //ul[@class="card-list"]//div//h3[contains(text(), "New space")]
 ${SPACE SELECT BY NAME}           //ul[@class="card-list"]//div//h3
@@ -27,15 +27,6 @@ ${ALREADY TAKEN NAME ERROR}       css:main section[class="pageheader"] div[class
 
 
 *** Keywords ***
-# Go To My Spaces
-#     [Documentation]    Navigate to my spaces dashboard, needs to be already loged in.
-#     Click Element    ${USER ICON}
-#     Wait Until Element Is Visible    ${USER SPACES BUTTON}
-#     Click Element    ${USER SPACES BUTTON}
-#     ${alert_present}    Run Keyword And Return Status    Alert Should Be Present
-#     Run Keyword If    ${alert_present}    Handle Alert
-#     Wait Until Page Contains    ${YOUR SPACES TITLE}
-
 Go To My Spaces
     [Documentation]    Navigate to my spaces dashboard, needs to be already logged in.
     Click Element    ${USER ICON}
@@ -58,6 +49,7 @@ Create New Named Public Space
     Title Should Be    ${username}${EDITING SPACE TITLE}
     Input Text         ${EDIT PUBLIC SPACE BOX}    ${newSpaceName}
     Click Element      ${SAVE EDIT SPACE NAME}
+    #TODO resolve this sleep, make it dinamic.
     Sleep              ${WAIT TIMEOUT}
 
 
@@ -84,8 +76,9 @@ Delete Space
 Clear Created Space
     [Documentation]    Receives one str argument, deletes the space with that argument as name.
     [Arguments]    ${toDeleteSpaceName}
-    Sleep    3
+    Wait Until Page Contains    ${toDeleteSpaceName}
     Go To My Spaces
+    #TODO solve repetition!
     Wait Until Element Is Visible    ${SPACE SELECT BY NAME}\[contains(., "${toDeleteSpaceName}")]
     Click Element    ${SPACE SELECT BY NAME}\[contains(., "${toDeleteSpaceName}")]
     Delete Space

@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Resource for common variables, like the user icon...
+Documentation    Resource for common variables
 
 
 *** Variables ***
@@ -11,3 +11,10 @@ ${WAIT TIMEOUT}               3
 ${SELENIUM SPEED}             0 seconds
 #Selectors variables:
 ${USER ICON}                  css:nav[role="navigation"] div[class="login"] button
+
+#Credentials
+${VALID USERNAME}       qaknimeweb
+${VALID PASSWORD}       0qAknimeweb0_
+
+${INVALID USERNAME}     ------
+${INVALID PASSWORD}     ------

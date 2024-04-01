@@ -2,14 +2,13 @@
 Documentation           MySpace page test suite. In order to function properly, the account logged
 ...                     in should have a default "my spaces" (under this view, there should be only
 ...                     visible 3 things: Private, Public and Create new space CARDS)
-Resource                ../resources/mySpacePage.resource
-Resource                ../resources/loginPage.resource
+Resource                ../resources/pages/mySpacePage.resource
+Resource                ../resources/pages/loginPage.resource
 
 #Before starting the test cases the following Setup will be executed.
-#After the test end, the teadown occurs.
+#After the test end, teadown is executed
 Test Setup         Run Keywords    Start Basic Setup    Login Setup
 Test Teardown      Close Application
-
 
 
 *** Variables ***
@@ -23,7 +22,7 @@ ${CREATE N PUBLIC SPACES}    2
 
 *** Test Cases ***
 
-Create New Public Space
+Create New Public Space Test
     [Documentation]    Create a new public space, assert if it was created, and then deletes it
     Go To My Spaces
     My Spaces Page Should Be Open
@@ -31,9 +30,9 @@ Create New Public Space
     Space Should Be Created    ${SPACE NAME}
     Clear Created Space    ${SPACE NAME}
 
-Edit Space With Duplicated Name
+Edit Space With Duplicated Name Test
     [Documentation]    Create two spaces, and tries to edit the name of the later with the same as the first one.
-    ...                Check if alert for already taken name takes place, and then deletes both spaces.
+    ...                Then checks if alert for already taken name takes place, and then deletes both spaces.
     Go To My Spaces
     My Spaces Page Should Be Open
     Create New Named Public Space    ${SPACE NAME}    ${VALID USERNAME}
@@ -42,8 +41,14 @@ Edit Space With Duplicated Name
     Already Taken Name Error Should Be Visible
     Duplicated Name Cleanup    ${SPACE NAME}
 
+#Other posible tests:
+#-Delete Space Test > Verifies if deletion is done correctly ()
+#-
+
+
 *** Keywords ***
 Login Setup
+    [Documentation]    Navigate to login page, input credentials and submit them.
     Go To Login Page
     Input Credentials     ${VALID USERNAME}    ${VALID PASSWORD}
     Submit Credentials
