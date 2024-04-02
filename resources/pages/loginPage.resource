@@ -2,6 +2,7 @@
 Documentation    Login Page (elements and keywords)
 Library     SeleniumLibrary
 Resource    ../resources/common.resource
+Resource    ../components/navMenu.resource
 
 
 *** Variables ***
@@ -27,18 +28,14 @@ Start Basic Setup
     Open Browser          ${HUB PAGE URL}    ${BROWSER}
     Set Selenium Speed    ${SELENIUM SPEED}
     Maximize Browser Window
-    Wait Until Element Is Visible    ${CLOSE COOKIES WINDOW}    ${WAIT TIMEOUT}
+    Wait Until Element Is Visible    ${CLOSE COOKIES WINDOW}
     Click Element         ${CLOSE COOKIES WINDOW}
-
-Close Application
-    [Documentation]    Close browser
-    Close Browser
 
 Go To Login Page
     [Documentation]    Navigate to login page, by clicking sign in button
     Wait Until Page Contains Element    ${SIGN IN BUTTON}
     Click Element         ${SIGN IN BUTTON}
-    Wait Until Page Contains Element    ${INPUT USERNAME}    ${WAIT TIMEOUT}
+    Wait Until Page Contains Element    ${INPUT USERNAME}
 
 Input Credentials
     [Arguments]           ${username}    ${password}

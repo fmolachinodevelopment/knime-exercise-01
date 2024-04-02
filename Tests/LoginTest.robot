@@ -1,12 +1,13 @@
 *** Settings ***
-Documentation           Login page test suite
+Documentation           Login page test suite - In order to change credentials, go to common.resource.
+...                     It's encouraged to use a new account or with mySpaces default.
 Resource                ../resources/pages/loginPage.resource
 Resource                ../resources/pages/home.resource
 
 #Before starting the test cases the following Setup will be executed.
 #After the test end, the teadown occurs.
 Test Setup       Initialize Browser To Login Page
-Test Teardown    Close Application
+Test Teardown    Close Browser
 
 
 *** Variables ***

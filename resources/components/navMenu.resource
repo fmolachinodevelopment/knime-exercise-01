@@ -1,10 +1,10 @@
 *** Settings ***
-Documentation    ...TODO
+Documentation    Navigation bar locators
 Library     SeleniumLibrary
 
 
 *** Variables ***
-#Str variables:
+#Text variables:
 ${HUB TITLE}                      KNIME Community Hub
 
 #Locators:
@@ -13,7 +13,6 @@ ${USER ICON}                      css:nav[role="navigation"] div[class="login"] 
 
 ##Navigation:
 ${HOME LINK}                      css:header a[href="https://www.knime.com"]
-#Would this work in any place of the page? i believe yes, as long as i stay withing "hub.knime.com/..."
 ${HUB HOME LINK}                  css:header a[href="/"]
 ${NAV MENU BUTTON}                css:nav[role="navigation"] button[title="More KNIME"]
 ${SOFTWARE NAV LINK}              css:nav[role="navigation"] a[href="https://www.knime.com/knime-software"]
