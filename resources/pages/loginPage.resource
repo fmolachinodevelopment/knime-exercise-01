@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Login Page (elements and keywords)
+Documentation    Login page model. Keywords and locators
 Library     SeleniumLibrary
 Resource    ../resources/common.resource
 Resource    ../components/navMenu.resource
@@ -22,21 +22,6 @@ ${MISSIN USERNAME ALERT}          //form[@id="user-login-form"]//div[contains(.,
 
 
 *** Keywords ***
-#Starts engine, enters hub page and close cookies pop up.
-Start Basic Setup
-    [Documentation]    Open browser, set selenium speed, maximize window and close the cookies pop up.
-    Open Browser          ${HUB PAGE URL}    ${BROWSER}
-    Set Selenium Speed    ${SELENIUM SPEED}
-    Maximize Browser Window
-    Wait Until Element Is Visible    ${CLOSE COOKIES WINDOW}
-    Click Element         ${CLOSE COOKIES WINDOW}
-
-Go To Login Page
-    [Documentation]    Navigate to login page, by clicking sign in button
-    Wait Until Page Contains Element    ${SIGN IN BUTTON}
-    Click Element         ${SIGN IN BUTTON}
-    Wait Until Page Contains Element    ${INPUT USERNAME}
-
 Input Credentials
     [Arguments]           ${username}    ${password}
     Input Username        ${username}

@@ -50,7 +50,7 @@ Create New Named Public Space
     Input Text         ${EDIT PUBLIC SPACE BOX}    ${newSpaceName}
     Click Element      ${SAVE EDIT SPACE NAME}
     #TODO Replace following static wait:
-    #Couldnt find a way to remove it. When going back quickly, in myspaces the name of the space is not updated soon enough
+    #Couldnt find a way to remove it Yet. When going back quickly, in myspaces the name of the space is not updated soon enough
     Sleep    3
 
 Space Should Be Created
@@ -133,4 +133,3 @@ Delete Both Spaces
 #Use ${FIRST NEW SPACE ON LIST} to locate the element to be eliminated, and iterate this
 #If its the already taken error, also delete the named one
 #TODO take away sleeps, look for another way, make it dinamic.
-    

@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    ...TODO
+Documentation    Home page model. Keywords and locators
 Library     SeleniumLibrary
 Resource    ../resources/common.resource
 Resource    ../components/navMenu.resource
@@ -16,7 +16,7 @@ ${SIGN IN BUTTON}                 //*[@id="__layout"]/div/div[1]/header/nav/div[
 *** Keywords ***
 #Starts engine, enters hub page and close cookies pop up.
 Initialize Browser To Login Page
-    [Documentation]    Open browser, set selenium speed, maximize window and close the cookies pop up.
+    [Documentation]    Open browser, set selenium speed, maximize window and close the cookies pop up. Navigate to Login Page
     Open Browser          ${HUB PAGE URL}    ${BROWSER}
     Set Selenium Speed    ${SELENIUM SPEED}
     Maximize Browser Window
