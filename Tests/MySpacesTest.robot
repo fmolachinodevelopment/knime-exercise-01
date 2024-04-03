@@ -27,12 +27,18 @@ Create New Public Space Test
 Edit Space With Duplicated Name Test
     [Documentation]    Create two spaces, and tries to edit the name of the later with the same as the first one.
     ...                Then checks if alert for already taken name takes place, and then deletes both spaces.
-    My Spaces Page Should Be Open
     Create New Named Public Space    ${SPACE NAME}    ${VALID USERNAME}
     Go To My Spaces
     Create New Named Public Space    ${SPACE NAME}    ${VALID USERNAME}
     Already Taken Name Error Should Be Visible
     [Teardown]    Delete Both Spaces    ${SPACE NAME}
+
+Deleting Public Space Test
+    [Documentation]    Creates a new public space, deletes it, and assert if it was deleted as intended.
+    Create New Named Public Space    ${SPACE NAME}    ${VALID USERNAME}
+    Delete Space
+    Page Should Not Contain    ${SPACE NAME}
+    [Teardown]    Close Browser
 
 
 *** Keywords ***

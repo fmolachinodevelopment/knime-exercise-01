@@ -33,7 +33,7 @@ Go To My Spaces
     Wait Until Element Is Visible    ${USER SPACES BUTTON}
     Click Element    ${USER SPACES BUTTON}
     ${alert_present}=    Run Keyword And Return Status    Alert Should Be Present    timeout=1s
-    Run Keyword And Ignore Error    Handle Alert
+    Run Keyword And Ignore Error    Handle Alert    timeout=1s
     Run Keyword    Wait Until Page Contains    ${YOUR SPACES TITLE}
 
 My Spaces Page Should Be Open
@@ -41,7 +41,7 @@ My Spaces Page Should Be Open
     Title Should Be    ${YOUR SPACES TITLE}
 
 Create New Named Public Space
-    [Documentation]    Receives one str argument, and create a new public space with this str as its name.
+    [Documentation]    Receives two str argument, and creates a new public space with newSpaceName as its name.
     [Arguments]        ${newSpaceName}    ${username}
     Wait Until Element Is Visible    ${CREATE NEW PUBLIC SPACE BTN}
     Click Element      ${CREATE NEW PUBLIC SPACE BTN}
@@ -49,8 +49,9 @@ Create New Named Public Space
     Title Should Be    ${username}${EDITING SPACE TITLE}
     Input Text         ${EDIT PUBLIC SPACE BOX}    ${newSpaceName}
     Click Element      ${SAVE EDIT SPACE NAME}
-    #TODO Replace following static wait
-    Sleep              3
+    #TODO Replace following static wait:
+    #Couldnt find a way to remove it. When going back quickly, in myspaces the name of the space is not updated soon enough
+    Sleep    3
 
 Space Should Be Created
     [Documentation]    Checks if space was created, by looking the current space name.

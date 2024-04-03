@@ -5,13 +5,20 @@
 This test suite is implemented with robotframework and SeleniumLibrary.
 
 ## Prerequisites
-- Python 3.12.2, and install the following, best under a python virtual enviorment (venv)
-- `pip install robotframework`
-- `pip install --upgrade robotframework-seleniumlibrary`
+- Python 3.12.2
+
+## Installing Dependencies
+- Clone this repository from [GitHub](https://github.com/fmolachinodevelopment/knime-exercise-01)
+- Navigate to the directory in your terminal and execute the following command:
+- `python -m venv venv`
+- Activate the virtual environment. On Windows, execute the Activate.ps1 script located in venv/Scripts/ directory. Navigate to the directory venv/Scripts/ and run:
+- `./Activate.ps1`
+- After activating the virtual environment, return to the root directory of the project and run:
+- `pip install -r requirements.txt`
+- Once the installation finishes, the tests can be executed.
 
 ## Running the Test Suite
-To run the test suite, open cmd CLI, then navigate to the root of this directory and execute the following line:
-- `./run_robot.bat Tests/TestSuite.robot`
+To run the test suite, open a command prompt (CLI), navigate to the root of this directory, and execute the following command:
+- `./run_robot.bat Tests`
 
-This will run the `TestSuite.robot` and create an output directory in which the logs and reports will be created.
-Future executions of the .bat will overwrite the already created reports.
+- This command will run all test files within the `Tests` directory and create an output directory where logs and reports will be generated. Subsequent executions using the .bat file will overwrite existing reports.
